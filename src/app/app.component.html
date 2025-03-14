@@ -5,22 +5,22 @@
       <div class="navbar-links" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#home" routerLinkActive="active">Home</a>
+            <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
+            <a class="nav-link" routerLink="/education" routerLinkActive="active">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" routerLink="/skills" routerLinkActive="active">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
           </li>
         </ul>
       </div>
@@ -28,174 +28,4 @@
   </nav>
 </header>
 
-<!-- home section START -->
-
-<section id="home" class="py-5 flex-row border-2">
-  <div class="row">
-    <div class="text px-5">
-      <div class="heading text-center py-2">
-        <h1 class="py-5 text-center">Hi, I'm <br />Shashi Nellivalasa</h1>
-      </div>
-      <p class="context px-5 mx-5">
-        I am a full stack web developer with expertise in front and back-end
-        development. My skills in HTML, CSS, JavaScript, and angular, React js
-        frameworks allow me to create dynamic and responsive web applications
-        that meet the needs of businesses and users alike.I also have experience
-        in database management and server-side programming languages such as
-        Node.js and Python.
-      </p>
-      <div class="buttons row my-5 justify-content-center">
-        <h2 class="connect fs-3 fw-bold text-center">Connect With Me!</h2>
-        <p-button icon="pi pi-github" styleClass="p-button-rounded p-button-info p-button-raised"></p-button>
-        <p-button icon="pi pi-linkedin" styleClass="p-button-rounded p-button-info p-button-raised"></p-button>
-        <p-button icon="pi pi-instagram" styleClass="p-button-rounded p-button-info p-button-raised"></p-button>
-      </div>
-    </div>
-    <div class="img flex justify-content-center">
-      <img class="profilePic" src="assets/profile-pic.png" alt="" />
-    </div>
-  </div>
-</section>
-
-<!-- home section END -->
-
-<!-- about section START -->
-<section id="about" class="py-5 flex-row border-2">
-  <div class="heading text-center py-2">
-    <h1>About <span>Me</span></h1>
-  </div>
-  <div class="row justify-content-center">
-    <h1 class="name py-5 text-center">Full Stack Developer</h1>
-    <p class="contextAbout px-5">
-      I am a Fresher Full Stack Developer with a passion for developing and
-      managing web applications. My greatest strengths are my problem-solving
-      skills, creativity and strong communication skills. Despite being new to
-      the industry, I have been able to deliver projects on time and within
-      budget, while ensuring the highest quality standards. My biggest
-      achievement so far has been creating a responsive UI for a web application
-      that significantly improved user experience. I am proficient in various
-      development languages such as HTML, CSS, JavaScript, Node.js, React.js and
-      MongoDB. Additionally, I have excellent interpersonal skills and I am
-      highly organized. I am confident that I can contribute to your
-      organization's success.
-    </p>
-  </div>
-</section>
-
-<!-- about section END -->
-
-<!-- education section START -->
-
-<section id="education" class="education p-5 fadeinleft animation-duration-2000 border-2">
-  <div class="heading text-center py-2">
-    <h1>My <span>Journey</span></h1>
-  </div>
-  <p-timeline [value]="events" layout="horizontal" align="bottom">
-    <ng-template pTemplate="opposite" let-event>
-      <div class="eduCard shadow-2 border-round">
-        <h2 class="fw-bold text-justify">{{ event.degree }}</h2>
-        <span class="fs-6 text-end"> -> {{ event.duration }}</span>
-        <h3 class="fw-bold text-justify p-2">{{ event.institute }}</h3>
-        <p>{{ event.description }}</p>
-      </div>
-    </ng-template>
-  </p-timeline>
-</section>
-
-<!-- education section END -->
-
-<!-- skills section START -->
-
-<section id="skills" class="fadeinright animation-duration-2000 p-5 border-2">
-  <div class="px-4 py-5 md:px-6 lg:px-8">
-    <div class="heading text-center py-2">
-      <h1>My <span>Skills</span></h1>
-    </div>
-    <div class="skillsGrid">
-      <div *ngFor="let skill of skills">
-        <div class="border-round card flex text-center">
-          <p-knob class="" [(ngModel)]="skill.percentage" valueTemplate="{value}%" [readonly]="true"></p-knob>
-          <h2 class="h2">{{ skill.skillName | uppercase }}</h2>
-          <p>{{skill.description}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- skills section END -->
-
-<!-- projects section START -->
-
-<section id="projects" class="fadeinright animation-duration-1000 p-5 border-2">
-  <div class="px-4 py-8 md:px-6 lg:px-8 text-center">
-    <div class="heading text-center py-2">
-      <h1>My <span>Projects</span></h1>
-    </div>
-    <div class="grid">
-      <div *ngFor="let project of projects" class="col-12 md:col-4 mb-4 px-5">
-        <span class="p-3 shadow-2 mb-3 inline-block surface-card border-2 rounded-3">
-          <i class="pi pi-desktop text-4xl text-blue-500"></i>
-        </span>
-        <div class="text-900 text-xl mb-3 font-medium">
-          {{project.projectName}}
-        </div>
-        <span class="text-700 line-height-3">{{project.description}}</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- projects section END -->
-
-<!-- contact section START -->
-
-<section id="contact" class="fadeinleft animation-duration-1000 p-5 border-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="well well-sm">
-          <form class="form-horizontal" action="" method="post">
-            <fieldset>
-              <!-- Name input-->
-              <div class="form-group">
-                <label class="col-md-3 control-label" for="name">Name</label>
-                <div class="col-md-9">
-                  <input id="name" name="name" type="text" placeholder="Your name" class="form-control" />
-                </div>
-              </div>
-
-              <!-- Email input-->
-              <div class="form-group">
-                <label class="col-md-3 control-label" for="email">Your E-mail</label>
-                <div class="col-md-9">
-                  <input id="email" name="email" type="text" placeholder="Your email" class="form-control" />
-                </div>
-              </div>
-
-              <!-- Message body -->
-              <div class="form-group">
-                <label class="col-md-3 control-label" for="message">Your message</label>
-                <div class="col-md-9">
-                  <textarea class="form-control" id="message" name="message"
-                    placeholder="Please enter your message here..." rows="5"></textarea>
-                </div>
-              </div>
-
-              <!-- Form actions -->
-              <div class="form-group">
-                <div class="col-md-12 text-right">
-                  <button type="submit" class="btn btn-primary btn-lg">
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- contact section END -->
+<router-outlet></router-outlet>

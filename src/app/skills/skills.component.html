@@ -1,0 +1,16 @@
+<section id="skills" class="fadeinright animation-duration-2000 p-5 border-2">
+    <div class="px-4 py-5 md:px-6 lg:px-8">
+        <div class="heading text-center py-2">
+            <h1>My <span>Skills</span></h1>
+        </div>
+        <div class="skillsGrid">
+            <div *ngFor="let skill of skills">
+                <div class="border-round card flex text-center">
+                    <p-knob class="" [(ngModel)]="skill.percentage" valueTemplate="{value}%" [readonly]="true"></p-knob>
+                    <h2 class="h2">{{ skill.skillName | uppercase }}</h2>
+                    <p>{{skill.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
