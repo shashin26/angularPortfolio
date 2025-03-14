@@ -20,11 +20,11 @@ a {
   width: 10px;
   height: 10px;
 }
-section {
+router-outlet {
   background-color: #caf0f8;
-  margin-top: 80px !important;
-  margin-left: 80px !important;
-  margin-right: 80px !important;
+  margin-top: 300px !important;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
   height: auto;
 }
 .navbar {
@@ -46,8 +46,8 @@ section {
 }
 .navbar {
   margin-top: 10px !important;
-  margin-left: 80px !important;
-  margin-right: 80px !important;
+  margin-left: 40px !important;
+  margin-right: 40px !important;
 }
 .eduCard {
   text-align: center;

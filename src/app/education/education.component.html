@@ -1,15 +1,18 @@
-<section id="education" class="education p-5 fadeinleft animation-duration-2000 border-2">
-    <div class="heading text-center py-2">
-        <h1>My <span>Journey</span></h1>
-    </div>
-    <p-timeline [value]="events" layout="horizontal" align="bottom">
-        <ng-template pTemplate="opposite" let-event>
-            <div class="eduCard shadow-2 border-round">
-                <h2 class="fw-bold text-justify">{{ event.degree }}</h2>
-                <span class="fs-6 text-end"> -> {{ event.duration }}</span>
-                <h3 class="fw-bold text-justify p-2">{{ event.institute }}</h3>
-                <p>{{ event.description }}</p>
-            </div>
-        </ng-template>
-    </p-timeline>
+<section
+  id="education"
+  class="education p-5 fadeinleft animation-duration-2000 border-2"
+>
+  <div class="heading text-center py-2">
+    <h1>My <span>Journey</span></h1>
+  </div>
+  <p-timeline [value]="events" layout="horizontal" align="bottom">
+    <ng-template pTemplate="opposite" let-event>
+      <div class="eduCard shadow-2 border-round">
+        <h2 class="fw-bold text-justify">{{ event.degree }}</h2>
+        <span class="fs-6 text-end"> -> {{ event.duration }}</span>
+        <h3 class="fw-bold text-justify p-2">{{ event.institute }}</h3>
+        <p>{{ event.description }}</p>
+      </div>
+    </ng-template>
+  </p-timeline>
 </section>
