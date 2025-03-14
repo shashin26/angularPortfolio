@@ -20,16 +20,15 @@ a {
   width: 10px;
   height: 10px;
 }
-router-outlet {
+section {
   background-color: #caf0f8;
-  margin-top: 300px !important;
-  margin-left: 40px !important;
-  margin-right: 40px !important;
+  margin-top: 80px !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
   height: auto;
+  border-radius: 5px;
 }
-.navbar {
-  background-color: #caf0f8;
-}
+
 .text {
   width: 50%;
   text-align: justify;
@@ -46,8 +45,10 @@ router-outlet {
 }
 .navbar {
   margin-top: 10px !important;
-  margin-left: 40px !important;
-  margin-right: 40px !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  background-color: #caf0f8;
+  border-radius: 5px;
 }
 .eduCard {
   text-align: center;
@@ -87,4 +88,9 @@ h1,
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+}
+
+.buttons {
+  padding-bottom: 30px;
+  text-align: center;
 }
