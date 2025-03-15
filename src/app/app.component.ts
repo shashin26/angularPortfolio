@@ -15,13 +15,5 @@ interface EventItem {
 })
 export class AppComponent {
   title = 'portfolio';
-
-  skills: any[] = [];
-  projects: any[] = [];
-
   constructor() {}
-
-  onSubmit(form: any) {
-    console.log(form);
-  }
 }
