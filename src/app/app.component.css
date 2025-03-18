@@ -1,6 +1,6 @@
 :root {
   --primary-color: #023e8a;  /* Blue */
-  --secondary-color: #caf0f8; /* Red */
+  --secondary-color: #caf0f8; /* skyblue */
 }
 
 * {
@@ -43,6 +43,9 @@ section {
   border-radius: 5px;
 }
 
+.connect-link {
+  color: whitesmoke;
+}
 .text {
   width: 60%;
   text-align: justify;
@@ -58,6 +61,12 @@ section {
   height: 450px;
   border-radius: 50%;
 }
+
+.profilePic:hover {
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
 .navbar {
   margin-top: 20px !important;
   margin-left: 20px !important;
@@ -65,13 +74,19 @@ section {
   background-color: #caf0f8;
   border-radius: 5px;
 }
+
 .eduCard {
   text-align: center;
   background-color: white;
-  padding: 40px !important;
-  width: 400px !important;
-  height: 400px;
+  padding: 20px !important;
+  width: 450px !important;
+  height: 300px;
 }
+
+.eduCard:hover {
+  scale: 1.1;
+}
+
 p-button {
   text-align: center;
   width: 150px;
