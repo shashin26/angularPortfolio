@@ -8,9 +8,9 @@
   <p-timeline [value]="events" layout="horizontal" align="bottom">
     <ng-template pTemplate="opposite" let-event>
       <div class="eduCard shadow-2 border-round">
-        <h4 class="fw-bold text-justify">{{ event.degree }}</h4>
-        <span class="fs-6 text-end"> -> {{ event.duration }}</span>
-        <p class="fw-bold text-justify">{{ event.institute }}</p>
+        <h4 class="fw-bold text-justify">{{ event.degree | uppercase}}</h4>
+        <span class="fs-6 text-end"> -> {{ event.duration | uppercase }}</span>
+        <p class="fw-bold text-justify">{{ event.institute | uppercase }}</p>
         <p class="text-center" >{{ event.description }}</p>
       </div>
     </ng-template>
